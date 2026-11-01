@@ -1,0 +1,27 @@
+{
+  "name": "genpark-personal-agent-non-sleep-deep-rest-nsdr-protocol-skill",
+  "version": "1.0.0",
+  "description": "Quantifies Non-Sleep Deep Rest (NSDR) state shift, parasympathetic down-regulation index (PDRI), striatal dopamine replenishment, and circadian window scheduling.",
+  "tools": [
+    {
+      "name": "evaluate_nsdr_state_shift",
+      "description": "Calculates Parasympathetic Down-Regulation Index (PDRI), dopamine replenishment, and EEG depth.",
+      "parameters": {
+        "session_duration_minutes": "float (default 20.0)",
+        "baseline_respiratory_rate_bpm": "float (default 16.0)",
+        "post_session_respiratory_rate_bpm": "float (default 8.5)",
+        "baseline_subjective_arousal_10": "float (default 7.5)",
+        "post_session_subjective_arousal_10": "float (default 3.0)"
+      }
+    },
+    {
+      "name": "recommend_nsdr_timing_protocol",
+      "description": "Prescribes ideal NSDR duration and execution window based on circadian nadir and sleep debt.",
+      "parameters": {
+        "sleep_debt_hours": "float (default 1.5)",
+        "morning_cognitive_load": "string (default 'high')",
+        "current_hour_24h": "float (default 14.0)"
+      }
+    }
+  ]
+}
